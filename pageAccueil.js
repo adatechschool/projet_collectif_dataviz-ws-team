@@ -4,8 +4,9 @@ fetch("https://api.themoviedb.org/3/person/popular?api_key=c6428b9644056a3cae4a5
     const myJSON = reponse2;
 console.log("myJson", myJSON)
 
-        for (const x in myJSON.results) {               
+        for (const x in myJSON.results) {        
             let total = document.createElement('div');
+            total.className = "acteur";
             
             let photo = document.createElement('img');
             photo.src = "https://www.themoviedb.org/t/p/w235_and_h235_face" +  myJSON.results[x].profile_path;
@@ -13,18 +14,18 @@ console.log("myJson", myJSON)
             total.appendChild(photo);
             
             let name = document.createElement('div');
+            name.className = "nom";
             name.innerText = myJSON.results[x].name;
             console.log("name", name.innerText)
             total.appendChild(name);
-            
+        
+
             document.body.appendChild(total);
+            
         };
 
     })
-        
-                                     
-                                  
-//document.getElementById("liste").innerHTML = list;
+
 fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=1")    
 .then(reponse => reponse.json())                        //je convertis ma réponse en json
 
@@ -41,6 +42,43 @@ console.log("myJson2", myJSON2)
             li.innerHTML += myJSON2.results[x].original_title;
         };
     })       
+
+
+    fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=2")    
+    .then(reponse => reponse.json())                        //je convertis ma réponse en json
+    
+    .then(reponse2 => { 
+        const myJSON3 = reponse2;
+    console.log("myJson3", myJSON3)
+        document.getElementById('myItemList').appendChild(ul);
+    
+            for (const x in myJSON3.results) {               //je vais chercher le nom de chaque acteur dans l'objet
+                let li = document.createElement('li');
+                ul.appendChild(li);
+            
+                li.innerHTML += myJSON3.results[x].original_title;
+            };
+        })       
+
+
+        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=2")    
+        .then(reponse => reponse.json())                        //je convertis ma réponse en json
+        
+        .then(reponse2 => { 
+            const myJSON4 = reponse2;
+        console.log("myJson4", myJSON4)
+            document.getElementById('myItemList').appendChild(ul);
+        
+                for (const x in myJSON4.results) {               //je vais chercher le nom de chaque acteur dans l'objet
+                    let li = document.createElement('li');
+                    ul.appendChild(li);
+                
+                    li.innerHTML += myJSON4.results[x].original_title;
+                };
+            })  
+
+
+    
 
 
     

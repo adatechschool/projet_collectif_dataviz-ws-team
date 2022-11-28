@@ -1,11 +1,27 @@
-div{
-    display: inline;
+body{
+    background-image: url("fondPellicule.jpg");
+    
+    
+    background-attachment: fixed;
 }
 
-li{
-    display: inline;
+div{
+    display: inline-block;
 }
 
 ul{
+    float: left;
+    
+}
+
+.nom{
+    text-align: center;
+    background-color: blue;
+    color: white;
     display: block;
+}
+
+.acteur{
+    border: 3px red dashed;
+    margin: 10px;
 }
