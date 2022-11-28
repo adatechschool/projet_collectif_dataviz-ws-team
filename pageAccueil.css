@@ -1,0 +1,11 @@
+div{
+    display: inline;
+}
+
+li{
+    display: inline;
+}
+
+ul{
+    display: block;
+}
