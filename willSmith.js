@@ -1,4 +1,4 @@
-fetch("https://api.themoviedb.org/3/person/2888?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US")    
+fetch("https://api.themoviedb.org/3/person/1136406?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US")    
 .then(reponse => reponse.json())                        //je convertis ma réponse en json
 .then(reponse2 => {   //je récup ma reponse en console log pour l'afficher
 
@@ -11,8 +11,8 @@ let image = reponse2.profile_path;
 
 
 console.log(reponse2)
-document.getElementById("test").innerHTML = birth;
-document.getElementById("left").innerHTML = name;
+document.getElementById("birth").innerHTML = birth;
+document.getElementById("name").innerHTML = name;
 document.getElementById("bio").innerHTML = bio;
 document.getElementById("image").src = "https://www.themoviedb.org/t/p/w300_and_h450_bestv2" + image;
 })
