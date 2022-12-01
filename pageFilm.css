@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  #191919;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 59%;
+    padding-right: 5%;
+    flex-direction: row-reverse;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px  25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover{
+    color: #F9004D;
+    transition: .4s;
+}
+
+.hero input{
+    margin: 8px 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #F2F2F2;
+}
+
+.film_name{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    padding: 20px;
+}
+
+.image{
+    margin right: 25px;
+    float: left;
+}
+
+.slogan{
+   margin-left: 640px;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 19px;
+}
+
+.date{
+    margin-left: 640px;
+    font-size: 19px;
+    width: 550px;
+    color: aqua;
+}
+
+.text-date{
+    color:#fcfc ;
+    font-size: 19px;
+}
+
+.text-slogan{
+    color:#fcfc ;
+    font-size: 19px;
+}
+
+.text-overview{
+    color:#fcfc ;
+   font-size: 19px;
+   margin-bottom: 20px;
+}
+
+.text-runtime{
+    color:#fcfc ;
+    font-size: 19px;
+}
+
+.text-genre{
+    color:#fcfc ;
+    font-size: 19px;
+}
+
+#dat{
+    color: white;
+    font-size: 19px;
+}
+
+.vue{
+    margin-left: 640px;
+    color: white;
+    width: 550px;
+    font-size: 19px;
+}
+
+.runtime{
+    margin-left: 640px;
+    color: white;
+    width: 550px;
+    font-size: 19px;
+    padding-bottom: 50px;
+}
+
+.genres{
+    margin-left: 640px;
+    color: white;
+    width: 550px;
+    font-size: 19px;
+}

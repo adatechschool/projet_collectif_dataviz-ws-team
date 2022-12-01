@@ -2,107 +2,121 @@ fetch("https://api.themoviedb.org/3/person/popular?api_key=c6428b9644056a3cae4a5
 .then(reponse => reponse.json())                        //je convertis ma réponse en json
 .then(reponse2 => { 
     const myJSON = reponse2;
-console.log("myJson", myJSON)
 
         for (const x in myJSON.results) {        
+            
             let total = document.createElement('div');
             total.className = "acteur";
             
             let photo = document.createElement('img');
+            photo.className = "image";
             photo.src = "https://www.themoviedb.org/t/p/w235_and_h235_face" +  myJSON.results[x].profile_path;
-            console.log("photo", photo.src)
             total.appendChild(photo);
             
             let name = document.createElement('div');
             name.className = "nom";
             name.innerText = myJSON.results[x].name;
-            console.log("name", name.innerText)
-            total.appendChild(name);
-        
+            total.appendChild(name);        
 
-            document.body.appendChild(total);
+            let id = myJSON.results[x].id;
+
+            let link = document.createElement('a');
+            link.className = "lien";
+            link.href = `file:///C:/Users/kce00/OneDrive/Documents/CODE/Ada/projet%20collectif%20Will%20Smith/willSmith.html?id=${id}`;
+
+            link.appendChild(total);
+        
+            document.body.appendChild(link);
             
         };
 
     })
 
-fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=1")    
+    fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=1")    
 .then(reponse => reponse.json())                        //je convertis ma réponse en json
 
 .then(reponse2 => { 
     const myJSON2 = reponse2;
-console.log("myJson2", myJSON2)
+    console.log("myJson2", myJSON2)
     ul = document.createElement('ul');
     document.getElementById('myItemList').appendChild(ul);
 
         for (const x in myJSON2.results) {               //je vais chercher le nom de chaque acteur dans l'objet
             let li = document.createElement('li');
+            
+            let id = myJSON2.results[x].id;
+            console.log("id2", id);
+
+            let link = document.createElement('a');
+            link.className = "linklist";
+            link.href = `file:///C:/Users/kce00/OneDrive/Documents/CODE/Ada/projet%20collectif%20Will%20Smith/pageFilm.html?id=${id}`;
+            link.innerHTML = myJSON2.results[x].original_title;
+            li.appendChild(link);
+
             ul.appendChild(li);
         
-            li.innerHTML += myJSON2.results[x].original_title;
-        };
-    })       
+        }
 
+        
+    })       
 
     fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=2")    
     .then(reponse => reponse.json())                        //je convertis ma réponse en json
     
     .then(reponse2 => { 
         const myJSON3 = reponse2;
-    console.log("myJson3", myJSON3)
         document.getElementById('myItemList').appendChild(ul);
     
-            for (const x in myJSON3.results) {               //je vais chercher le nom de chaque acteur dans l'objet
-                let li = document.createElement('li');
-                ul.appendChild(li);
+        for (const x in myJSON3.results) {               //je vais chercher le nom de chaque acteur dans l'objet
+            let li = document.createElement('li');
+            li.className = "linklist";
             
-                li.innerHTML += myJSON3.results[x].original_title;
-            };
+            let id = myJSON3.results[x].id;
+
+            let link = document.createElement('a');
+            link.className = "linklist";
+            link.href = `file:///C:/Users/kce00/OneDrive/Documents/CODE/Ada/projet%20collectif%20Will%20Smith/pageFilm.html?id=${id}`;
+            link.innerHTML = myJSON3.results[x].original_title;
+            li.appendChild(link);
+
+            ul.appendChild(li);
+        }
         })       
 
 
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=2")    
+        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=c6428b9644056a3cae4a52a8996a6ecb&language=en-US&page=3")    
         .then(reponse => reponse.json())                        //je convertis ma réponse en json
         
         .then(reponse2 => { 
             const myJSON4 = reponse2;
-        console.log("myJson4", myJSON4)
             document.getElementById('myItemList').appendChild(ul);
         
-                for (const x in myJSON4.results) {               //je vais chercher le nom de chaque acteur dans l'objet
-                    let li = document.createElement('li');
-                    ul.appendChild(li);
+            for (const x in myJSON4.results) {               //je vais chercher le nom de chaque acteur dans l'objet
+                let li = document.createElement('li');
+                li.className = "linklist";
                 
-                    li.innerHTML += myJSON4.results[x].original_title;
-                };
+                let id = myJSON4.results[x].id;
+
+                let link = document.createElement('a');
+                link.className = "linklist";
+                link.href = `file:///C:/Users/kce00/OneDrive/Documents/CODE/Ada/projet%20collectif%20Will%20Smith/pageFilm.html?id=${id}`;
+                link.innerHTML = myJSON4.results[x].original_title;
+                li.appendChild(link);
+    
+                ul.appendChild(li);
+                }
             })  
 
-
-    
-
-
-    
-    /*var pageWeb = list2;
-    console.log("lien", pageWeb.link('file:///C:/Users/kce00/OneDrive/Documents/CODE/Ada/projet%20collectif%20Will%20Smith/willSmith.html'))
-    document.getElementById("liste2").innerHTML = pageWeb.link('file:///C:/Users/kce00/OneDrive/Documents/CODE/Ada/projet%20collectif%20Will%20Smith/willSmith.html');*/
-
-
-//document.getElementById("liste2").innerHTML = list2;
-
-/*.then(reponse2 => { 
-    const myJSON = reponse2;
-//console.log("myJson", myJSON)
-    ul = document.createElement('ul');
-    document.getElementById('myItemList').appendChild(ul);
-
-        for (const x in myJSON.results) {               //je vais chercher le nom de chaque acteur dans l'objet
-            let li = document.createElement('li');
-            ul.appendChild(li);
+        /*function similarFilms(){
         
-            li.innerHTML += myJSON.results[x].name;
-        };
-    })       
-*/
+            var title = document.getElementById("myInput").value;
+            console.log("title", title)
+            document.getElementById("demo").innerHTML = "You wrote: " + title;
+    
+        }*/
+
+
+//TIMER
 
 let bodyEl = document.getElementsByTagName("body")[0];
 let titleEl = document.getElementById("title");
@@ -167,3 +181,4 @@ let countDownInterval = setInterval(getCountdown, 1000);
 
 // init
 getCountdown();
+

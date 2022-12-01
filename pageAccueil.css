@@ -1,55 +1,123 @@
+*{
+    padding: 0;
+    margin: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
 body{
-    background-image: url("fondPellicule.jpg");
-    
-    
+    font-family:‘Times New Roman’, Times, serif;
+    background-color: #191919;;
+    background-size: cover;
     background-attachment: fixed;
+}
+
+ul{
+    background-color: rgba(211, 250, 252, 0.967);
+    float: left;
+    color:#191919;
+    list-style-type: none;
+    margin: 0%;
+    border: 0px;
+}
+
+.linklist{
+    color: rgb(11, 149, 196);
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://upload.wikimedia.org/wikipedia/fr/c/c4/Logo_Avatar_2.png");
+    background-size: 100%;
+    background-position: center;
+    padding: 30px 80px;
+    border-radius: 10px;
+}
+
+.titre{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+   }
+
+h1{
+    color: rgba(192, 48, 192, 0.8);
+    text-align: center;
+    font-size: 80px;
+    padding: 20px;
+    display: block;
+}
+
+h3{
+    margin-left: 30px;
+    color: white;
+    font-size: 30px;
 }
 
 div{
     display: inline-block;
 }
 
-ul{
-    float: left;
-    
+input, button{
+    margin: 8px 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #F2F2F2;
 }
 
 .nom{
-    text-align: center;
-    background-color: blue;
-    color: white;
-    display: block;
+  background-color: rgba(192, 48, 192, 0.8);
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  text-align: center;
+  color: white;
+  display: block;
 }
 
 .acteur{
-    border: 3px red dashed;
-    margin: 10px;
+        width: 15%;
+        display: inline-block;
+        box-shadow: 2px 2px 20px rgb(108, 204, 252);
+        border-radius: 5px;
+        margin: 14px;
 }
-#wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(226, 222, 222, 0.953);
-    backdrop-filter: blur(5px);
-    padding: 30px 80px;
-    border-radius: 10px;
-}
+
 #minuteur {
     display: grid;
+    color: rgb(54, 149, 217);
     grid-template-columns: repeat(4, 200px);
     gap: 20px;
     margin: 10vh auto;
+    padding-top: 30%;
 }
+
 .box {
     height: 70px;
     text-align: center;
-    background-color: #f9f4f4;
     background-size: 50px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
+
 .box > div:first-child {
     font-size: 65px;
     display: flex;
